@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- Librerías de CAPH -->
+<link href="lib/caph/3.1.0/caph.min.css" rel="stylesheet">
+<script src="lib/caph/3.1.0/bower_components/jquery/dist/jquery.min.js"
+	type="text/javascript"></script>
+<script src="lib/caph/3.1.0/bower_components/lodash/lodash.min.js"
+	type="text/javascript"></script>
+<script src="lib/caph/3.1.0/caph-jquery.min.js" type="text/javascript"></script>
+
+<!-- Mis librerías -->
+<link href="css/style.css" rel="stylesheet">
+
+<script src="js/code.js" type="text/javascript"></script>
+</head>
+<body>
+	<!-- Pantalla principal -->
+	<div class="page" id="main">
+		<div class="header">
+			<h1>Elige un elemento de la UI</h1>
+		</div>
+		<div class="zone">
+			<div focusable data-focusable-initial-focus="true"
+				data-focusable-group="main" class="card" target="botones">
+				<div>Botones</div>
+			</div>
+			<div focusable data-focusable-group="main" class="card"
+				target="checkboxes">
+				<div>Checkboxes</div>
+			</div>
+			<div focusable data-focusable-group="main" class="card"
+				target="botonRadio">
+				<div>Botón de radio</div>
+			</div>
+			<div focusable data-focusable-group="main" class="card"
+				target="entrada">
+				<div>Entrada de texto</div>
+			</div>
+			<div focusable data-focusable-group="main" class="card"
+				target="dialogando">
+				<div>Diálogo</div>
+			</div>
+			<div focusable data-focusable-group="main" class="card"
+				target="contexto">
+				<div>Menú contextual</div>
+			</div>
+			<div focusable data-focusable-group="main" class="card"
+				target="desplegable">
+				<div>Lista desplegable</div>
+			</div>
+			<div focusable data-focusable-group="main" class="card"
+				target="lista">
+				<div>Lista</div>
+			</div>
+		</div>
+		<div class="footer">Samsung Dev Spain</div>
+	</div>
+
+	<!-- Pantalla de Botones-->
+	<div class="page" id="botones">
+		<div class="header">
+			<h1>Botones</h1>
+		</div>
+		<div class="zone">
+			<div>
+				<div id="boton1">Botón normal</div>
+				<div id="boton2">Botón deshabilitado</div>
+				<div id="boton3">Botón de activación</div>
+			</div>
+		</div>
+		<div class="footer">Samsung Dev Spain</div>
+	</div>
+
+	<!-- Pantalla de Checkboxes-->
+	<div class="page" id="checkboxes">
+		<div class="header">
+			<h1>Checkboxes</h1>
+		</div>
+		<div class="zone">
+			<div>
+				<div id="checkbox1">Checkbox normal</div>
+				<div id="checkbox2">Checkbox deshabilitado</div>
+				<div id="checkbox3">Checkbox preseleccionado</div>
+			</div>
+		</div>
+		<div class="footer">Samsung Dev Spain</div>
+	</div>
+
+	<!-- Pantalla de Ventana de diálogo-->
+	<div class="page" id="dialogando">
+		<div class="header">
+			<h1>Ventana de diálogo</h1>
+		</div>
+		<div class="zone">
+			<div>
+				<div class="boton" id="botonD">Abrir ventana diálogo</div>
+			</div>
+		</div>
+		<div class="footer">Samsung Dev Spain</div>
+	</div>
+
+	<!-- Pantalla de Menú contextual-->
+	<div class="page" id="contexto">
+		<div class="header">
+			<h1>Menú contextual</h1>
+		</div>
+		<div class="zone">
+			<div>
+				<div class="boton" id="botonC">Menú contextual</div>
+				<div id="menuContexto" style="display: none">
+					<div class="caph-context-menu-item-template">${content}</div>
+					<div class="caph-context-menu-arrow-up-template">▲</div>
+					<div class="caph-context-menu-arrow-down-template">▼</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">Samsung Dev Spain</div>
+	</div>
+
+	<!-- Pantalla de Lista desplegable-->
+	<div class="page" id="desplegable">
+		<div class="header">
+			<h1>Lista desplegable</h1>
+		</div>
+		<div class="zone">
+			<div>
+				<div id="listaDesplegable">
+					<div class="caph-dropdown-list-placeholder-template">
+						<div class="textbox">
+							<div class="label">Action</div>
+						</div>
+						<div class="button">
+							<div class="label">▽</div>
+						</div>
+					</div>
+					<div class="caph-dropdown-list-item-template">${content}</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">Samsung Dev Spain</div>
+	</div>
+
+	<!-- Pantalla de Botones de radio-->
+	<div class="page" id="botonRadio">
+		<div class="header">
+			<h1>Botones de radio</h1>
+		</div>
+		<div class="zone">
+			<div>
+				<div id="radioboton1">Botón de radio normal</div>
+				<div id="radioboton2">Botón de radio normal 2</div>
+				<div id="radioboton3">Botón de radio preseleccionado</div>
+			</div>
+		</div>
+		<div class="footer">Samsung Dev Spain</div>
+	</div>
+
+	<!-- Pantalla de Entrada de texto-->
+	<div class="page" id="entrada">
+		<div class="header">
+			<h1>Entrada de texto</h1>
+		</div>
+		<div class="zone">
+			<input id="entrada1" /> <input id="entrada2" />
+		</div>
+		<div class="footer">Samsung Dev Spain</div>
+	</div>
+
+	<!-- Pantalla de Lista -->
+	<div class="page" id="lista">
+		<div class="header">
+			<h1>Lista</h1>
+		</div>
+		<div class="zone">
+			<div id="listado" style="width: 800px; height: 400px;"></div>
+		</div>
+		<div class="footer">Samsung Dev Spain</div>
+	</div>
+
+	<!-- Ventana de diálogo -->
+	<div id="dialogo" class="caph-dialog">
+		<div class="caph-dialog-title">Diálogo</div>
+		<div class="caph-dialog-content">Esto es una ventana de diálogo
+		</div>
+		<div class="caph-dialog-buttons" button-type="confirm"></div>
+	</div>
+
+	<!-- Plantilla para la lista -->
+	<script id="template1" type="text/template">
+     <div class="itemLista" focusable data-focusable-group="lista" style="width:200px;height:200px"><div style="font-size:80px;margin:20px"><%= item.letter %></div><%= item.content %></div>
+ </script>
+</body>
+</html>
+
